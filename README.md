@@ -27,5 +27,5 @@ php flarum cache:clear
 ## Links
 
 - [Packagist](https://packagist.org/packages/davwheat/session-keepalive)
-- [GitHub](https://github.com/davwheat/session-keepalive)
+- [GitHub](https://github.com/davwheat/flarum-session-keepalive)
 - [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
