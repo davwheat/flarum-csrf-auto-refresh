@@ -1375,6 +1375,7 @@ __metadata:
   resolution: "@davwheat/csrf-auto-refresh@workspace:."
   dependencies:
     "@flarum/prettier-config": ^1.0.0
+    "@types/mithril": ^2.0.10
     flarum-tsconfig: ^1.0.2
     flarum-webpack-config: ^2.0.0
     prettier: ^2.6.2
@@ -1553,7 +1554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mithril@npm:^2.0.7":
+"@types/mithril@npm:^2.0.10, @types/mithril@npm:^2.0.7":
   version: 2.0.10
   resolution: "@types/mithril@npm:2.0.10"
   checksum: 3436384913a451f69f35deae1b30647334492d5fe1dfdaac906a44053963db0bf62d485e6327e52f73d1f5916a56717fddb0366b3f616bea1718c41d4a6fa3bf

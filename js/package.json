@@ -3,6 +3,7 @@
     "private": true,
     "devDependencies": {
         "@flarum/prettier-config": "^1.0.0",
+        "@types/mithril": "^2.0.10",
         "flarum-tsconfig": "^1.0.2",
         "flarum-webpack-config": "^2.0.0",
         "prettier": "^2.6.2",
