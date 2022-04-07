@@ -19,8 +19,12 @@ class RefreshCsrfToken extends AbstractShowController
      */
     public function data(ServerRequestInterface $request, Document $document)
     {
-        $csrfToken = $request->getAttribute('session')->token();
+        /** @var \Illuminate\Session\Store */
+        $session = $request->getAttribute('session');
+        $csrfToken = $session->token();
 
-        return ['token' => $csrfToken];
+        return [
+            'token' => $csrfToken,
+        ];
     }
 }
