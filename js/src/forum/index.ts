@@ -8,10 +8,11 @@ interface ICsrfResponse {
   };
 }
 
-const interval = 5 * 60 * 60 * 1000;
-
 app.initializers.add('davwheat/csrf-auto-refresh', () => {
-  // Every 5 mins, make POST to keep CSRF alive
+  // attempt keep alive 4 times before session expiry
+  const keepAliveInterval = (parseInt(app.forum.attribute('sessionLifetimeMins')) * 60 * 1000) / 4;
+
+  // POST to keep session token alive
   (window as any).__davwheat_csrf_auto_refresh_interval = setInterval(() => {
     app
       .request<ICsrfResponse>({ url: app.forum.attribute('apiUrl') + '/csrf-refresh', method: 'POST' })
@@ -21,10 +22,9 @@ app.initializers.add('davwheat/csrf-auto-refresh', () => {
         app.session.csrfToken = csrfToken;
       })
       .catch((e) => {
-        console.group();
-        console.warn(`[davwheat/csrf-auto-refresh] Failed to keep CSRF token alive.`);
+        console.group(`[davwheat/csrf-auto-refresh] Failed to keep CSRF token alive.`);
         console.error(e);
         console.groupEnd();
       });
-  }, interval);
+  }, keepAliveInterval);
 });
