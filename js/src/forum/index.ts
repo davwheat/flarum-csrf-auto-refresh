@@ -8,7 +8,7 @@ interface ICsrfResponse {
   };
 }
 
-app.initializers.add('davwheat/csrf-auto-keepalive', () => {
+app.initializers.add('davwheat/session-keepalive', () => {
   setTimeout(() => {
     // attempt keep alive 4 times before session expiry
     const keepAliveInterval = (parseInt(app.forum.attribute('sessionLifetimeMins')) * 60 * 1000) / 4;
@@ -23,7 +23,7 @@ app.initializers.add('davwheat/csrf-auto-keepalive', () => {
           app.session.csrfToken = csrfToken;
         })
         .catch((e) => {
-          console.group(`[davwheat/csrf-auto-keepalive] Failed to keep CSRF token alive.`);
+          console.group(`[davwheat/session-keepalive] Failed to keep CSRF token alive.`);
           console.error(e);
           console.groupEnd();
         });

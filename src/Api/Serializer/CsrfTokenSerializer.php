@@ -1,6 +1,6 @@
 <?php
 
-namespace Davwheat\CsrfAutoKeepalive\Api\Serializer;
+namespace Davwheat\SessionKeepalive\Api\Serializer;
 
 use Flarum\Api\Serializer\AbstractSerializer;
 use InvalidArgumentException;

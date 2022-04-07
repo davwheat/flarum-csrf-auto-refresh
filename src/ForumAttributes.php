@@ -1,6 +1,6 @@
 <?php
 
-namespace Davwheat\CsrfAutoKeepalive;
+namespace Davwheat\SessionKeepalive;
 
 use Flarum\Api\Serializer\ForumSerializer;
 use Illuminate\Contracts\Container\Container;

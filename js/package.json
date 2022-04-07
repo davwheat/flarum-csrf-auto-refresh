@@ -1,5 +1,5 @@
 {
-    "name": "@davwheat/csrf-auto-keepalive",
+    "name": "@davwheat/session-keepalive",
     "private": true,
     "devDependencies": {
         "@flarum/prettier-config": "^1.0.0",

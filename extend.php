@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of davwheat/csrf-auto-keepalive.
+ * This file is part of davwheat/session-keepalive.
  *
  * Copyright (c) 2022 David Wheatley.
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Davwheat\CsrfAutoKeepalive;
+namespace Davwheat\SessionKeepalive;
 
 use Flarum\Extend;
 
@@ -18,7 +18,7 @@ return [
         ->js(__DIR__ . '/js/dist/forum.js'),
 
     (new Extend\Routes('api'))
-        ->post('/csrf-keepalive', 'davwheat-csrf-auto-keepalive.csrf-keepalive', Api\Controller\RefreshCsrfToken::class),
+        ->post('/csrf-keepalive', 'davwheat-session-keepalive.csrf-keepalive', Api\Controller\RefreshCsrfToken::class),
 
     (new Extend\ApiSerializer(\Flarum\Api\Serializer\ForumSerializer::class))
         ->attributes(ForumAttributes::class),

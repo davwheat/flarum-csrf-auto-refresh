@@ -1,8 +1,8 @@
 <?php
 
-namespace Davwheat\CsrfAutoKeepalive\Api\Controller;
+namespace Davwheat\SessionKeepalive\Api\Controller;
 
-use Davwheat\CsrfAutoKeepalive\Api\Serializer\CsrfTokenSerializer;
+use Davwheat\SessionKeepalive\Api\Serializer\CsrfTokenSerializer;
 use Flarum\Api\Controller\AbstractShowController;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
