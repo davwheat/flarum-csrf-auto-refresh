@@ -1,5 +1,5 @@
 {
-    "name": "davwheat/csrf-auto-refresh",
+    "name": "davwheat/csrf-auto-keepalive",
     "description": "Automatically refreshes user CSRF tokens to prevent interaction errors after idling.",
     "keywords": [
         "flarum"

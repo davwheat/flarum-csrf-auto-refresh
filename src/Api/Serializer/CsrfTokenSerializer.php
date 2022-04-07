@@ -1,6 +1,6 @@
 <?php
 
-namespace Davwheat\CsrfAutoRefresh\Api\Serializer;
+namespace Davwheat\CsrfAutoKeepalive\Api\Serializer;
 
 use Flarum\Api\Serializer\AbstractSerializer;
 use InvalidArgumentException;
@@ -10,7 +10,7 @@ class CsrfTokenSerializer extends AbstractSerializer
     /**
      * {@inheritdoc}
      */
-    protected $type = 'csrf-auto-refreshes';
+    protected $type = 'csrf-keepalive-response';
 
     /**
      * {@inheritdoc}
