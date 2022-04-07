@@ -15,7 +15,11 @@ use Flarum\Extend;
 
 return [
     (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/js/dist/forum.js'),
+        ->js(__DIR__ . '/js/dist/forum.js'),
+
     (new Extend\Routes('api'))
         ->post('/csrf-refresh', 'davwheat-csrf-auto-refresh.csrf-refresh', Api\Controller\RefreshCsrfToken::class),
+
+    (new Extend\ApiSerializer(\Flarum\Api\Serializer\ForumSerializer::class))
+        ->attributes(ForumAttributes::class),
 ];
