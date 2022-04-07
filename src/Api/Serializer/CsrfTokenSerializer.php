@@ -28,8 +28,6 @@ class CsrfTokenSerializer extends AbstractSerializer
      */
     protected function getDefaultAttributes($model)
     {
-        return [
-            'token' => $model['token'],
-        ];
+        return $model;
     }
 }
