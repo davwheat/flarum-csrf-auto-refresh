@@ -22,6 +22,9 @@ return [
     (new Extend\Routes('api'))
         ->post('/csrf-keepalive', 'davwheat-session-keepalive.csrf-keepalive', Api\Controller\RefreshCsrfToken::class),
 
+    (new Extend\Csrf())
+        ->exemptRoute('davwheat-session-keepalive.csrf-keepalive'),
+
     (new Extend\ApiSerializer(\Flarum\Api\Serializer\ForumSerializer::class))
         ->attributes(ForumAttributes::class),
 ];
